@@ -1,0 +1,45 @@
+     lib                                                                  sys                                       
+
+
+                                          len=4,  N=3000
+  user time = 4.673873                                    user time = 2.035994
+  sys time = 18.597948                                    sys time = 16.780329
+
+
+                                          len=4, N=4000
+ user time = 1.198701                                    user time = 0.486389   
+ sys time = 4.788300                                      sys time = 4.266900
+
+
+                                         len=512,  N=5000
+user time = 8.719885                                      user time = 3.205937
+ sys time = 33.530179                                     sys time = 28.561629
+
+
+                                        len=512,  N=3000       
+ user time = 0.725911                                      user time = 0.270205
+ sys time = 2.851829                                        sys time = 2.477340        
+  
+
+                                       len=4096,  N=5000
+user time = 1.598104                                        user time = 0.843614           
+ sys time = 10.791713                                       sys time = 11.688875
+
+
+                                        len=4096, N=7000
+ user time = 3.226158                                        user time = 1.709499
+ sys time = 23.085573                                        sys time = 24.016635
+
+
+                                       len=8192,   N=2000
+ user time = 0.288579                                          user time = 0.138144
+ sys time = 3.005386                                            sys time = 3.048669
+
+
+
+                                         len=8192,  N=5000
+ user time = 1.620036                                           user time = 0.830658
+ sys time = 18.778494                                           sys time = 20.482629
+
+
+Z otrzymanych wyników wynika przewaga funkcji systemowych nad bibliotecznymi jeśli chodzi o szybkość operacji na plikach o niewielkiej długości rekordów. W większości powyższych porównań funkcje systemowe okazują sie szybsze zarówno pod względem czasu systemowego i czasu użytkownika. Jednak przy większej długości rekordów funkcje biblioteczne wypadają lepiej przy pomiarze czasu systemowego, a gorzej w przypadku czasu użytkownika. Widać też, że mimo wydłuzenia rekordu zmiana jest niewielka, bo porównujemy tylko pierwszy znak, więc algorytmicznie nie ma róznicy, zmienia się jedynie czas operacji na pamięci.

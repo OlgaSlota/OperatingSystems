@@ -1,0 +1,22 @@
+CC = gcc
+CFLAGS = -Wall -fPIC
+LIBSTATTARGET = liblist.a 
+LIBDYNTARGET = liblist.so
+LIBSRC = liblist.c
+LIBOBJ = liblist.o
+
+
+all: $(LIBSTATTARGET) $(LIBDYNTARGET)
+
+$(LIBDYNTARGET): $(LIBSRC)
+	$(CC) $(CFLAGS) -c $(LIBSRC)
+	$(CC) $(CFLAGS) -shared -o $(LIBDYNTARGET) $(LIBOBJ)
+	
+
+$(LIBSTATTARGET): $(LIBSRC)
+	$(AR) ruv $(LIBSTATTARGET) 
+	ranlib $(LIBSTATTARGET)
+
+
+clean:
+	$(RM) $(LIBSTATTARGET) $(LIBDYNTARGET) $(LIBOBJ)
