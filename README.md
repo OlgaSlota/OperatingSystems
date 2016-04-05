@@ -1,11 +1,13 @@
 # OperatingSystems
 C language implementations of system mechanisms used from user level
 
+
 cw01 - Memory management , libraries and time measurement:
 
 1) List implementation with basic functionalities as an addres book.
 
 2) Using implemented list as a ready library - 3 different solutions : static , dynamic , shared.
+
 
 cw02 - IO operations
 
@@ -15,11 +17,13 @@ cw02 - IO operations
 
 3) File locking ( read/ write , mandatory/advisory).
 
+
 cw03 - Process operations
 
 1) Creating and testing behavior of processes ( fork / vfork / clone with different arguments).
 
 2) Creating some kind of child processes tree ( while file tree walk ).
+
 
 cw04 - Signals
 
